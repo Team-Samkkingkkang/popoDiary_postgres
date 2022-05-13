@@ -4,8 +4,8 @@
     {% include 'head.html' %}
 </head>
 <body>
+    <a href="{% url 'accounts:hello' %}">가영이의 링크</a>
     {% include 'header.html' %}
-
     {% block content %}
     {% endblock %}
 

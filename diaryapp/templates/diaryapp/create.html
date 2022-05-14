@@ -2,9 +2,9 @@
 
 {% block content %}
 
-    <form method="get" enctype="multipart/form-data" action="/diary/">
+    <form method="post" action="{% url 'diarys:create_diary' %}" enctype="multipart/form-data">
         {% csrf_token %}
-        {% comment %}<input type="hidden" name="form-name" value="form-one">{% endcomment %}
+        <input type="hidden" name="form-name" value="form-one">
         <input type="file" name="diary_img">
         <input type="text" name="diary_content">
         <input type="submit">

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="get" enctype="multipart/form-data" action="/diary/">
+        {% csrf_token %}
+        {% comment %}<input type="hidden" name="form-name" value="form-one">{% endcomment %}
+        <input type="file" name="diary_img">
+        <input type="text" name="diary_content">
+        <input type="submit">
+    </form>
+
+{% endblock %}

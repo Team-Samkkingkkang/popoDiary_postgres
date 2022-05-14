@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-g
-=======
 {% load socialaccount %}
 
 <h1>Login</h1>
-<form method="POST" action="{% url 'accounts:login'%}">
+<form method="POST">
     {% csrf_token %}
     <p>{{ error }}</p>
     아이디:
@@ -20,4 +17,4 @@ g
 </form>
 <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a><br>
 <a href="{% provider_login_url 'naver' %}">네이버 로그인</a><br>
->>>>>>> 2101ffb0eae2e96b2dde073f565d77ead5adb628
+

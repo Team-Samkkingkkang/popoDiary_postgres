@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'accountapp',
     'boardapp',
     'diaryapp',
-    'mainapp'
+    'mainapp',
+    'chatbotapp',
+    'myapp',
 ]
 
 MIDDLEWARE = [

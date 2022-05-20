@@ -1,1 +1,7 @@
-my diary
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <a href="{% url 'diarys:create_diary' %}">다이어리 쓰기</a>
+
+{% endblock %}

@@ -15,7 +15,7 @@ class User(models.Model):
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     order_number = models.IntegerField()
     order_price = models.IntegerField()
     order_delivery_fee = models.IntegerField()

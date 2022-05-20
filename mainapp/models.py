@@ -8,8 +8,6 @@ class User(models.Model):
     user_profile = models.ImageField()
     user_regi_date = models.DateTimeField(auto_now_add=True)
     user_number = models.IntegerField()
-    user_sns_type = models.CharField(max_length=200)
-    user_sns_id = models.IntegerField()
     user_auth_type = models.BooleanField()
     user_address_number = models.CharField(max_length=200)
     user_address = models.CharField(max_length=200)

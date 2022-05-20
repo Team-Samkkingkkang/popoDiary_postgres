@@ -1,6 +1,6 @@
 {% load socialaccount %}
 
-<h1>Login</h1>
+<h1>로그인</h1>
 <form method="POST">
     {% csrf_token %}
     <p>{{ error }}</p>
@@ -15,6 +15,18 @@
     <br>
     <input class="btn btn-dark" type="submit" value="로그인">
 </form>
-<a href="{% provider_login_url 'kakao' %}">카카오 로그인</a><br>
-<a href="{% provider_login_url 'naver' %}">네이버 로그인</a><br>
-
+<br>
+<ul style="list-style:none; display:flex;">
+    <li><a href="/accounts/login">로그인| </a></li>
+    <li><a href="/accounts/logout">로그아웃| </a></li>
+    <li><a href="/accounts/signup">회원가입</a></li>
+</ul>
+<br>
+<form action="{% provider_login_url 'kakao' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">카카오 로그인</button>
+</form>
+<form action="{% provider_login_url 'naver' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">네이버 로그인</button>
+</form>

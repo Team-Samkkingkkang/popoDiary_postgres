@@ -2,6 +2,24 @@
 
 {% block content %}
 
-    <a href="{% url 'diarys:create_diary' %}">다이어리 쓰기</a>
+    <div class="diary_write_button">
+        <a href="{% url 'diarys:create_diary' %}">다이어리 쓰기</a>
+    </div>
+    <div class="diary_name">
+        <h1>My Diary</h1>
+    </div>
+    <div class="diary">
+        <div class="diary_image_list">
+        {% for diary in diarys %}
+            <div class="diary_image_list_content">
+            <a href="{% url 'diarys:detail' diary.id %}" >
+                <img src="{{ diary.diary_img.url }}" class="diary_image">
+            </a>
+            <p class="diary_date">{{diary.diary_date.month}}월 {{diary.diary_date.day}}일</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
+

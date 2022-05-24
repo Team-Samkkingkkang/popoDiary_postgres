@@ -1,0 +1,38 @@
+:root {
+    --a_tag_color : #7A6E6E;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: var(--a_tag_color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login_area {
+    padding: 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px;
+    padding-right: 10px;
+}
+
+.header_list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.header_list li {
+    font-weight: bold;
+}
+
+.header_list > li:hover {
+    text-decoration: underline;
+}

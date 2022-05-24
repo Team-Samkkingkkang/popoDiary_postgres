@@ -4,7 +4,10 @@
     {% include 'head.html' %}
 </head>
 <body>
-    <a href="{% url 'accounts:hello' %}">로그인</a>
+    <div class="login_area">
+        <a href="{% url 'accounts:hello' %}" class="login">로그인</a>
+    </div>
+
     {% include 'header.html' %}
     {% block content %}
     {% endblock %}

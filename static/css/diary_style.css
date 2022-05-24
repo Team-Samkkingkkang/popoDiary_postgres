@@ -1,0 +1,36 @@
+:root {
+    --text-color: #7A6E6E;
+}
+
+.diary_write_button {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px;
+}
+
+.diary_name {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.diary_image_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 200px;
+    padding: 10px;
+}
+
+.diary_image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.diary_date {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    font-family: "Helvetica Neue", sans-serif;
+}
